@@ -17,13 +17,18 @@ CONVENTIONAL_PRODUCE = [
 ]
 
 def assembled_matrix
+  produce = [ [CONVENTIONAL_PRODUCE], [ORGANIC_PRODUCE] ]
   # Build an array that contains both of the above arrays
   # This matrix will represent a produce storage room
   # Organic standards require that organic products be stored ABOVE conventional, not the other way around
   # Make sure conventional produce is first, on the 'zeroth' / 'bottom' shelf
 end
 
+p assembled_matrix
+puts""
+
 def sorted_matrix
+  assembled_matrix.sort { |a,b| a <=> b }
   # Using Array literal syntax only, build another nested array that 
   # uses the arrays of conventional and organic produce as before.
   # However, this time, sort each internal array alphabetically by the first character
